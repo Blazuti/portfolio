@@ -73,6 +73,8 @@ main{
     display: grid;
     grid-template: repeat(4, 1fr) / 10px 2fr 8fr 10px;
     gap: 10px;
+
+    
 }
 
 #ficha{
@@ -156,7 +158,33 @@ p{
 #skills{
 
     grid-area: 2 / 3 / 3 / 4;
+    display: grid;
+    grid-template: 70px auto/ auto auto;
+    gap: 10px;
+}
 
+#linha01{
+    grid-area: 1 / 1 / 2 / 3;
+
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#content{
+    align-self: flex-start;
+}
+
+
+#coluna01{
+    grid-area: 2 / 1 / 3 / 2;
+
+    background-color: grey;
+}
+
+#coluna02{
+    grid-area: 2 / 2 / 3 / 3;
+
+    background-color: grey;
 }
 
 /*******************************************/
