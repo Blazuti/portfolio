@@ -19,6 +19,11 @@
     
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 body{
     color: var(--cor-texto);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -35,6 +40,8 @@ header{
     padding-right: 20px;
     height: 5.5vh;
     background-color: var(--cor-titulo);
+    position: fixed;
+    width: 100%;
 
     justify-content: flex-end;
     align-items: center;
@@ -77,20 +84,21 @@ main{
     display: grid;
     grid-template: repeat(4, auto) / 10px 2fr 8fr 10px;
     gap: 10px;
-
+    
     
 }
 
 
 
 #ficha{
-    
+    margin-top: 40px;
     padding: 15px;
     border-radius: 5px;
     background-color: white;
-
     grid-area: 1 /2 / 2 / 3;
     height: 100vh;
+    position: fixed;
+    width: 20%;
 }
 
 
@@ -102,6 +110,7 @@ main{
     height: 150px;
     width: 150px;
     border-radius: 50%;
+    
 }
 
 h1{
@@ -135,7 +144,7 @@ p{
 /******************************************/
 
 #home{
-
+    margin-top: 40px;
     grid-area: 1 / 3 / 2 / 4;
 
 }
@@ -300,11 +309,46 @@ p{
 #projetos{
 
     grid-area: 4 / 3 / 5 / 4;
+   
+}
+
+#box-container{
     display: grid;
-    grid-template-columns: 7fr 3fr; 
+    grid-template-columns: 8fr 2fr; 
+    grid-template-rows: auto;
     grid-auto-rows: auto;
 }
 
-#projetos:nth-child(1){
-    grid-area: 2 / 1 / 3 / 2;
+
+
+#box-container > .box-item h3{
+    color: var(--cor-texto);
+}
+
+.foto-projeto > img{
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.box-item .texto-oculto, p{
+    color: var(--cor-texto);
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.2rem;
+}
+
+.texto-oculto{
+    display: none;
+    color: var(--cor-texto);
+    font-size: 0.9rem;
+    text-align: justify;
+    line-height: 1.2rem;
+}
+
+.box-item:hover .texto-oculto{
+    display: block;
+    margin-top: 10px;
 }
