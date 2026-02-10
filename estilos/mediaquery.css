@@ -275,7 +275,7 @@ p{
     grid-auto-rows: auto;
 }
 
-.formacao-item{
+.box-item{
     padding: 10px;
     border-radius: 5px;
     border-left: 7px solid var(--cor-secundária);
@@ -283,12 +283,12 @@ p{
     margin-bottom: 10px;
 }
 
-.formacao-item > h3{
+.box-item > h3{
     color: var(--cor-secundária);
     margin: 3px 0px;
 }
 
-.formacao-item:hover{
+.box-item:hover{
     box-sizing: border-box;
     border-left: 15px solid var(--cor-titulo);
     transition: 0.5s;
@@ -300,4 +300,11 @@ p{
 #projetos{
 
     grid-area: 4 / 3 / 5 / 4;
+    display: grid;
+    grid-template-columns: 7fr 3fr; 
+    grid-auto-rows: auto;
+}
+
+#projetos:nth-child(1){
+    grid-area: 2 / 1 / 3 / 2;
 }
