@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 
+
 :root{
     --cor-titulo: #0077ff;
     --cor-texto: #222222;
@@ -8,6 +9,16 @@
     --cor-fundo-pagina: #f0f0f0;
 }
 
+
+main{
+    display: grid;
+    grid-template: repeat(4, auto) / 10px 2fr 8fr 10px;
+}
+
+#ficha{
+    position: fixed;
+    width: 20%;
+}
 
 
 
@@ -37,7 +48,7 @@ header{
     
     display: flex;
     padding-right: 20px;
-    height: 5.5vh;
+    height: 50px;
     background-color: var(--cor-titulo);
     position: fixed;
     width: 100%;
@@ -326,7 +337,7 @@ p{
 }
 
 .foto-projeto > img{
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
     height: 200px;
     border-radius: 10px;
